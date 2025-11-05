@@ -21,6 +21,7 @@
   text-align: start;
   margin: 2vw;
   padding: 1vw;
+  border: solid black 3px;
 }
 
 .failed{
@@ -36,5 +37,18 @@
 }
 
 .header{
+  display: flex;
+  min-height: 5vw;
+  border: solid black 3px;
+  align-items: center;
+  justify-content: center;
+}
+
+.column{
+  text-align: center;
   width: 30%;
+}
+
+ul{
+  padding: 0;
 }

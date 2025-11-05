@@ -1,7 +1,7 @@
 import React from 'react'
 import  { useState } from 'react'
 
-function TicketInfo({time, name, status, children}){
+function TicketInfo(time, name, status, children){
   const [timeCreated, setTimeCreated] = useState({time});
   const [ticketName, setTicketName] = useState({name});
   const [ticketStatus, setTicketStatus] = useState({status});
@@ -10,7 +10,6 @@ function TicketInfo({time, name, status, children}){
   return (
     <div className="ticket">
 
-      {children}
       {/*
       <div className="name">{ticketName}</div>
       <div className="time">{timeCreated}</div>
