@@ -77,5 +77,4 @@ function TicketHeader(props){
   )
 }
 
-
 export default Board
