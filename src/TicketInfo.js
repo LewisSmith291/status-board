@@ -1,10 +1,11 @@
 import React from 'react'
 import  { useState } from 'react'
 
-function TicketInfo(time, name, status, children){
+function TicketInfo(time, name, status, children, info){
   const [timeCreated, setTimeCreated] = useState({time});
   const [ticketName, setTicketName] = useState({name});
   const [ticketStatus, setTicketStatus] = useState({status});
+  const [ticketInfo, setTicketInfo] = useState(info)
 
 
   return (

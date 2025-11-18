@@ -1,3 +1,7 @@
+body{
+  background-color: rgba(219, 255, 243, 1);
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -5,8 +9,7 @@
 }
 
 .board{
-  background-color: grey;
-  border: solid black 0.2vw;
+  border-radius: 1vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,26 +24,38 @@
   text-align: start;
   margin: 1vw;
   padding: 1vw;
-  border: solid black 3px;
   border-radius: 1vw;
+  background-color: rgba(143, 214, 224, 1);
+  transition: transform 0.3s ease-in;
+  transform:scaleY(1);
 }
 
 .failed{
-  background-color: red;
+  background-color: rgba(189, 96, 96, 1);
 }
 
 .in-progress{
-  background-color: rgb(233, 178, 0);
+  background-color: rgba(210, 177, 66, 1);
 }
 
 .completed{
-  background-color: green;
+  background-color: rgb(77, 174, 77);
+}
+
+.ticket .hide-info{
+  display: none;
+}
+
+.ticket .show-info{
+  display: flex;
 }
 
 .header{
   display: flex;
   min-height: 5vw;
-  border: solid black 0.2vw;
+  font-size: 2vw;
+  filter: brightness(90%);
+  background-color: inherit;
   border-radius: 1vw;
   align-items: center;
   justify-content: center;

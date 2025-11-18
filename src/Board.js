@@ -11,6 +11,7 @@ function Board (props) {
         time = {ticket.time}
         name = {ticket.name}
         status = {ticket.status}
+        info = {ticket.info}
       />
   ));
 
@@ -21,6 +22,7 @@ function Board (props) {
         time = {ticket.time}
         name = {ticket.name}
         status = {ticket.status}
+        info = {ticket.info}
       />
   ));
   const [failed, setFailed] = useState(props.failed.map((ticket) => 
@@ -30,6 +32,7 @@ function Board (props) {
         time = {ticket.time}
         name = {ticket.name}
         status = {ticket.status}
+        info = {ticket.info}
       />
   ));
 
@@ -59,14 +62,43 @@ function Board (props) {
   )
 }
 
+function Info(info){
+
+  function toggle(){
+
+  }
+
+
+  return (
+  <div>
+    <p onClick={toggle()}>info</p>
+    <div className='show-info'>{info.info}</div>
+  </div>)
+}
+
 function Ticket(props){
+  const [isShowingInfo, setIsShowingInfo] = useState(false);
+
+  function toggleShowInfo(){
+
+  }
+
+
+
   return (
     <li className="ticket">
       <div>{props.time}</div>
       <div>{props.name}</div>
       <div>{props.status}</div>
+      <Info info = {props.info} 
+            isShowing = {isShowingInfo} 
+      />
     </li>
   )
+}
+
+function toggleInfo(toggleFunction){
+  toggleFunction();
 }
 
 function TicketHeader(props){
